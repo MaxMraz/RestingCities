@@ -24,6 +24,7 @@ public class ApiController {
 
 	@GetMapping("/api/states/{abbreviation}")
 	public State showStates(@PathVariable(value = "abbreviation") String abbreviation) {
+		System.out.println(stateRepo.findByAbbreviationIgnoreCase(abbreviation));
 		return stateRepo.findByAbbreviationIgnoreCase(abbreviation);
 	}
 
