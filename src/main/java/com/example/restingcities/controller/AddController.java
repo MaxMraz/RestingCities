@@ -33,9 +33,9 @@ public class AddController {
 		return "states";
 	}
 
-	@RequestMapping("/states/{id}")
-	public String showAState(@PathVariable(value = "id") Long id, Model model) {
-		model.addAttribute("state", stateRepo.findById(id).get());
+	@RequestMapping("/states/{abbreviation}")
+	public String showAState(@PathVariable(value = "abbreviation") String abbreviation, Model model) {
+		model.addAttribute("state", stateRepo.findByAbbreviationIgnoreCase(abbreviation));
 		return "state";
 	}
 

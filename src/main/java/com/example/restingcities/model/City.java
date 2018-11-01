@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class City {
 	@Id
@@ -12,6 +14,8 @@ public class City {
 	private Long id;
 	private String name;
 	private int population;
+
+	@JsonIgnore
 	@ManyToOne
 	private State state;
 

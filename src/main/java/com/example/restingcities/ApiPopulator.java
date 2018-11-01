@@ -21,7 +21,8 @@ public class ApiPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		State ohio = new State("OH", "Ohio", "Birthplace of Aviation", null, "/api/states/oh/cities");
+		Fish happyFish = new Fish("Happy Fish", "Icthius mays", "IMGURL");
+		State ohio = new State("OH", "Ohio", "Birthplace of Aviation", happyFish, "/api/states/oh/cities");
 		ohio = stateRepo.save(ohio);
 		City columbus = new City("Columbus", 100, ohio);
 		columbus = cityRepo.save(columbus);
