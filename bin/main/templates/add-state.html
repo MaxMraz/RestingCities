@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Add State</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Add a State</h1>
+		
+		</header>
+		<main>
+			<div class="container">
+
+			<form action="/states" method="post">
+	
+				<label for="abbreviation">Abbreviation: <input type="text" name="abbreviation"/></label>
+				
+				<label for="name">Name: <input type="text" name="name"/></label>
+				
+				<label for="motto">Motto: <input type="text" name="motto"/></label>
+				
+				<label for="url">Url: <input type="text" name="url"/></label>
+				
+				<h1>Fish info</h1>
+				
+				<label for="fishName">Fish Name: <input type="text" name="fishName"/></label>
+				
+				<label for="binomialNomencluture">Binomial Nomencluture: <input type="text" name="binomialNomencluture"/></label>
+				
+				<label for="fishURL">Fish Url: <input type="text" name="fishURL"/></label>
+			
+				<input type="submit" value="Submit"/>
+			
+				
+			</form>
+
+			</div>
+		</main>
+		<footer>
+			<small>&copy; WCCI 2018</small>
+		</footer>
+	</div>
+</body>
+</html>
+
+

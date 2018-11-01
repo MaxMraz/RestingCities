@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>States</title>
+</head>
+<body>
+	<h1>States:</h1>
+	<ul>
+		<li th:each="state : ${states}">
+			<a th:href="|states/${state.id}|">
+			<h2 th:text="${state.name}"></h2>
+			</a>
+		
+		</li>
+	</ul>
+	
+		<a th:href="|states/add|">Add A City</a>
+		<a th:href="|states/add-state|">Add A State</a>
+	
+</body>
+</html>

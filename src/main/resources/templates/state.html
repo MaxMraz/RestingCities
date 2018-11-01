@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="${state.name}"></title>
+</head>
+<body>
+	<h1 th:text="${state.name}"></h1>
+	<h3 th:text="${state.abbreviation}"></h3>
+	<h3 th:text="${state.motto}"></h3>
+	<h2>Cities:</h2>
+	<ul>
+		<li th:each="city : ${state.cities}">
+			<h2 th:text="${city.name}"></h2>
+			<span th:text="|Population: ${city.population}|"></span>
+		</li>
+	</ul>
+</body>
+</html>

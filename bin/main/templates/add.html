@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Add A City</title>
+</head>
+<body>
+	<form action="/states/{abbreviation}/cities/add" method="post">
+		<label>City Name: <input type="text" name="cityName" /></label>
+		<label>City Population: <input type="number" name="population" /></label>
+		<label>State Abbreviation: <input type="text" name="abbreviation" /></label>
+		<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>
